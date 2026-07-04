@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <img src="https://www.reshot.com/preview-assets/icons/RE94SX2WQV/hotel-RE94SX2WQV.svg" alt="Hotel Logo" class="mb-2" style="width: 50px;">
+        <h1 class="display">Hotel Search API Playground</h1>
+        <p class="text-muted">Click a city to see you dream Hotel</p>
+    </header>
+
+    <div class="carousel-container">
+        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Slide">&#10095;</button>
+
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80" alt="Hotel Room 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=80" alt="Hotel Lobby">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80" alt="Hotel Pool">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1600&q=80" alt="Hotel Resort">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1600&q=80" alt="Hotel Bedroom">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80" alt="Luxury Hotel View">
+            </div>
+        </div>
+    </div>
+    <div class="city-buttons-container">
+    <button class="city-btn btn-blue">Ahmedabad</button>
+    <button class="city-btn btn-green">Bengaluru</button>
+    <button class="city-btn btn-red">Chennai</button>
+    <button class="city-btn btn-yellow">Delhi</button>
+    <button class="city-btn btn-cyan">Goa</button>
+    <button class="city-btn btn-gray">Gurgaon</button>
+    <button class="city-btn btn-dark">Hyderabad</button>
+    <button class="city-btn btn-slate">Jaipur</button>
+    <button class="city-btn btn-emerald">Kolkata</button>
+    <button class="city-btn btn-rose">Mumbai</button>
+    <button class="city-btn btn-indigo">Noida</button>
+    <button class="city-btn btn-teal">Pune</button>
+</div>
+<div class="hotels-carousel-container" id="hotelsCarouselContainer" style="display: none;">
+    <button class="hotel-carousel-btn h-prev-btn" id="hotelPrevBtn">&#10094;</button>
+    <button class="hotel-carousel-btn h-next-btn" id="hotelNextBtn">&#10095;</button>
+
+    <div class="hotels-track-wrapper">
+        <div class="hotels-carousel-track" id="hotelsCarouselTrack">
+            </div>
+    </div>
+</div>
+<div class="hotels-grid" id="hotelsGrid">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #fcfcfc; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden; 
+}
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    padding: 2rem 1rem; 
+    background-color: #f4f4f6; 
+    border-bottom: 1px solid #e2e8f0; 
+}
+
+.hero h1 {
+    margin: 10px 0 5px 0;
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    color: #1a202c;
+}
+
+.hero p {
+    margin: 0;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    color: #718096;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0; 
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 45vh; 
+    min-height: 250px;
+    max-height: 600px;
+}
+
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none; 
+    border: none;
+    width: auto;
+    height: auto;
+    font-size: 2.5rem;
+    font-weight: 100; 
+    color: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.1s ease;
+    z-index: 10;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.carousel-btn:hover {
+    color: rgba(255, 255, 255, 1); 
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.9); 
+}
+
+
+.prev-btn { left: 30px; }
+.next-btn { right: 30px; }
+
+
+@media (min-width: 768px) {
+    .carousel-slide img {
+        height: 55vh; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-slide img {
+        height: 65vh;
+    }
+}
+
+.city-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; /* Spacing between buttons */
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+.city-btn {
+    border: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.city-btn:hover {
+    opacity: 0.9;
+}
+
+.city-btn:active {
+    transform: scale(0.96);
+}
+
+/* Specific color variations from your screenshot */
+.btn-blue    { background-color: #007bff; }
+.btn-green   { background-color: #198754; }
+.btn-red     { background-color: #dc3545; }
+.btn-yellow  { background-color: #ffc107; color: #000000; } /* Dark text for contrast */
+.btn-cyan    { background-color: #0dcaf0; color: #000000; } /* Dark text for contrast */
+.btn-gray    { background-color: #6c757d; }
+.btn-dark    { background-color: #212529; }
+.btn-slate   { background-color: #495057; }
+.btn-emerald { background-color: #157347; }
+.btn-rose    { background-color: #e03131; }
+.btn-indigo  { background-color: #3b5bdb; }
+.btn-teal    { background-color: #0b7285; }
+
+
+
+.hotels-carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 40px; /* Leave room for the naked arrows */
+    box-sizing: border-box;
+}
+
+.hotels-track-wrapper {
+    width: 100%;
+    overflow: hidden; /* Hides extra cards */
+}
+
+.hotels-carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+
+.hotel-card {
+    min-width: calc(33.333% - 14px); /* Displays exactly 3 cards side-by-side on desktop */
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 900px) {
+    .hotel-card { min-width: calc(50% - 10px); }
+}
+@media (max-width: 600px) {
+    .hotel-card { min-width: 100%; }
+}
+
+.hotel-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.hotel-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.hotel-name {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333333;
+    font-weight: 500;
+}
+
+.hotel-meta-row {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0;
+}
+
+.hotel-rating-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.star-icon {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+.view-more-btn {
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.hotel-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #b0b0b0;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s;
+}
+
+.hotel-carousel-btn:hover { color: #333333; }
+.h-prev-btn { left: 0; }
+.h-next-btn { right: 0; }
+
+.hotel-status-msg {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+}
