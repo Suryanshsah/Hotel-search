@@ -65,6 +65,131 @@
 <div class="hotels-grid" id="hotelsGrid">
     </div>
 
+    <div class="api-features-section">
+        <h2 class="features-title">🔍 API Feature Examples</h2>
+        
+        <div class="accordion-container">
+            
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Get All Hotels
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels</code></p>
+                    <p>Returns a complete list of all available hotel properties in the database.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Get Hotel by ID
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels/:id</code></p>
+                    <p>Fetch details for a specific hotel using its unique database ID.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Filter by Name or Location
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?city=Delhi</code></p>
+                    <p>Filter the results by passing query parameters for name or location.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Filter by Price
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?price=5000</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Filter by Price Range
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?minPrice=2000&maxPrice=8000</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Filter by Rating
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?rating=4.5</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Filter by Rating Range
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?minRating=3&maxRating=5</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Search (Name / Location)
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels/search?q=resort</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Limit / Skip Pagination
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?limit=10&skip=20</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Sorting
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Endpoint: <code>GET /hotels?sort=price_asc</code></p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Create / Update / Delete
+                    <span class="chevron"></span>
+                </button>
+                <div class="accordion-content">
+                    <p>Supports <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, and <code>DELETE</code> methods for authenticated administrative tasks.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 created by <a href="https://github.com/Suryanshsah/Hotel-search" target="_blank">Suryansh</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

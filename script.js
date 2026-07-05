@@ -5,8 +5,7 @@ const slides = Array.from(track.children);
 
 let currentIndex = 0;
 
-function updateCarousel() {
-    // Shifts the inline container left/right based on viewport percentage metrics 
+function updateCarousel() { 
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
@@ -21,7 +20,7 @@ nextButton.addEventListener('click', () => {
 
 prevButton.addEventListener('click', () => {
     if (currentIndex === 0) {
-        currentIndex = slides.length - 1; // Infinite loop backward
+        currentIndex = slides.length - 1; 
     } else {
         currentIndex--;
     }
@@ -52,7 +51,6 @@ const hotelImages = [
 async function fetchHotels(cityName) {
     container.style.display = "block";
     hotelsTrack.innerHTML = `<div class="hotel-status-msg">Loading premium rooms in ${cityName}...</div>`;
-    // Hide navigation arrows while loading new data
     hotelNext.style.display = "none";
     hotelPrev.style.display = "none";
     hotelIndex = 0;
@@ -148,5 +146,22 @@ hotelPrev.addEventListener('click', () => {
 cityButtons.forEach(button => {
     button.addEventListener('click', () => {
         fetchHotels(button.textContent.trim());
+    });
+});
+
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+        
+        
+        const currentlyActive = document.querySelector('.accordion-item.active');
+        if (currentlyActive && currentlyActive !== item) {
+            currentlyActive.classList.remove('active');
+        }
+        
+        // Toggle the clicked dropdown
+        item.classList.toggle('active');
     });
 });
